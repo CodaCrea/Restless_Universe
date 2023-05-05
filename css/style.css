@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap");
+body {
+  font-family: "Rubik Distressed", sans-serif;
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+  user-select: none; /* Propriété standard */
+}
+
+h1,
+h2,
+p,
+li,
+span,
+a {
+  font-weight: 100;
+}
+
+.body-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.img-menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.header-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-menu h1 {
+  font-size: 120px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 0;
+  background: -webkit-linear-gradient(left, #832e00, #bc8f1b, #832e00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 6px 2px #832e00;
+  border-radius: 100px;
+  padding: 10px;
+}
+
+.header-menu p {
+  margin-top: 0;
+  font-size: 40px;
+  background: -webkit-linear-gradient(left, #bc0000, #ffb700, #bc0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 10px;
+}
+
+.tuto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tuto,
+.header-menu {
+  cursor: default;
+}
+
+.tuto-para {
+  background: linear-gradient(to left, #832e00, #bc8f1b, #832e00);
+  color: #ffd058;
+  font-size: 20px;
+  margin: 0 0 40px;
+  padding: 10px 10px 10px 25px;
+  border-radius: 10px;
+}
+
+.tuto span {
+  color: #fff;
+}
+
+.tuto h2 {
+  background: linear-gradient(to left, #832e00, #bc8f1b, #832e00);
+  color: #ffd058;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: underline;
+}
+.link-game {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 50px;
+  color: #630000;
+  background: linear-gradient(to left, #bc8f1b, #832e00, #bc8f1b);
+  margin: 0 45%;
+  padding: 20px 100px;
+  border: solid 2px #832e00;
+  box-shadow: 6px -6px 2px #832e00;
+  border-radius: 50%;
+  transition: 0.1s;
+}
+
+.link-game:hover {
+  transform: rotateZ(360deg);
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.link-game:active {
+  transform: scale(0.9);
+  transition: none;
+}
+
+.body-game {
+  margin: 0;
+  padding: 0;
+  background: url(../img/backgroundGame.png) no-repeat;
+  width: 100%;
+  text-align: center;
+}
+
+.link-menu {
+  text-transform: uppercase;
+  margin: 40px 47%;
+  color: #fff;
+  background: linear-gradient(#adadad, #5c5c5c47);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.1s;
+}
+
+.link-menu:hover {
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.link-menu:active {
+  transform: scale(0.9);
+  transition: none;
+}
+
+#gameBoard {
+  width: 80%;
+  height: 80vh;
+  position: absolute;
+  background: url(../img/background.gif) center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px dotted #fff;
+  z-index: 1;
+}
+
+.lifes {
+  position: absolute;
+  color: #ffffff;
+  width: 26%;
+  top: 5%;
+  font-size: 25px;
+}
+
+.number-lifes {
+  color: #33ff00;
+}
+
+/* .maj {
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  top: 50%;
+  animation: Anim;
+  font-size: 25px;
+  z-index: 2;
+} */
+/*
+.point {
+  font-size: 20px;
+  color: transparent;
+}
+
+.point1 {
+  margin-left: -6px;
+  margin-right: -6px;
+  animation: Point1 1s linear;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+.point2 {
+  margin-right: -6px;
+  animation: Point2 1s linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.point3 {
+  animation: Point3 1s linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes Point1 {
+  0% {
+    color: transparent;
+  }
+
+  20% {
+    color: #fff;
+  }
+
+  40% {
+    color: #fff;
+  }
+
+  60% {
+    color: #fff;
+  }
+
+  80% {
+    color: #fff;
+  }
+
+  100% {
+    color: transparent;
+  }
+}
+
+@keyframes Point2 {
+  0% {
+    color: transparent;
+  }
+
+  20% {
+    color: transparent;
+  }
+
+  40% {
+    color: #fff;
+  }
+
+  60% {
+    color: #fff;
+  }
+
+  80% {
+    color: #fff;
+  }
+
+  100% {
+    color: transparent;
+  }
+}
+
+@keyframes Point3 {
+  0% {
+    color: transparent;
+  }
+
+  20% {
+    color: transparent;
+  }
+
+  40% {
+    color: transparent;
+  }
+
+  60% {
+    color: #fff;
+  }
+
+  80% {
+    color: #fff;
+  }
+
+  100% {
+    color: transparent;
+  }
+} */
