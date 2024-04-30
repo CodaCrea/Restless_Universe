@@ -86,7 +86,7 @@ const animationLoop = () => {
     if (alienMissile.position.y + alienMissile.height >= world.height) {
       setTimeout(() => {
         alienMissiles.splice(index, 1);
-      }, 0);
+      }, 5000);
     } else {
       alienMissile.update();
     }
