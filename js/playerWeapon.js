@@ -1,12 +1,12 @@
 class Missiles {
-  constructor ({position}) {
+  constructor({ position }) {
     this.position = position;
-    this.velocity = {x: 0, y: -5};
+    this.velocity = { x: 0, y: -5 };
     this.width = 3;
     this.height = 10;
   }
 
-  draw () {
+  draw() {
     context.save();
     context.fillStyle = "blue";
     context.fillRect(this.position.x, this.position.y, this.width, this.height);
@@ -16,21 +16,21 @@ class Missiles {
 
 
 
-  update () {
+  update() {
     this.position.y += this.velocity.y;
     this.draw();
   }
 }
 
 class Particule {
-  constructor ({position, velocity, radius, color}) {
+  constructor({ position, velocity, radius, color }) {
     this.position = position;
     this.velocity = velocity;
     this.radius = radius;
     this.color = color;
     this.opacity = 1;
   }
-  draw () {
+  draw() {
     context.save();
     context.globalAlpha = this.opacity;
     context.beginPath();
@@ -40,7 +40,7 @@ class Particule {
     context.closePath();
     context.restore();
   }
-  update () {
+  update() {
     this.position.x += this.velocity.x;
     this.position.y += this.velocity.y;
     if (this.opacity > 0) {

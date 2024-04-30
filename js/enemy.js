@@ -7,7 +7,7 @@ class Enemy1 {
       y: 0
     };
     const image = new Image();
-    image.src = '../img/enemy2.png';
+    image.src = "../img/enemy2.png";
     image.onload = () => {
       this.image = image;
       this.width = 34;
@@ -45,16 +45,18 @@ class Enemy1 {
 
   shoot(enemyMissiles) {
     if (this.position) {
-      enemyMissiles.push(new EnemyMissiles({
-        position: {
-          x: this.position.x,
-          y: this.position.y
-        },
-        velocity: {
-          x: 0,
-          y: 2
-        }
-      }));
+      enemyMissiles.push(
+        new EnemyMissiles({
+          position: {
+            x: this.position.x,
+            y: this.position.y
+          },
+          velocity: {
+            x: 0,
+            y: 2
+          }
+        })
+      );
     }
   }
 }

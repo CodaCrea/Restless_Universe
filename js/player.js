@@ -1,5 +1,5 @@
 class Player {
-  constructor () {
+  constructor() {
     this.velocity = {
       x: 0, // Vitesse de déplacement du joueur sur l'axe horizontal
       y: 0 // Vitesse de déplacement du joueur sur l'axe vertical
@@ -17,7 +17,7 @@ class Player {
     };
   }
 
-  draw () {
+  draw() {
     // Le joueur sera une image
     context.drawImage(
       this.image,
@@ -28,27 +28,32 @@ class Player {
     );
   }
 
-  shoot () {
-    missiles.push(new Missiles({
-      position: {
-        x: this.position.x + this.width / 2.1,
-        y: this.position.y
-      },
-      velocity: {
-        x: 0,
-        y: -6
-      }
-    }));
+  shoot() {
+    missiles.push(
+      new Missiles({
+        position: {
+          x: this.position.x + this.width / 2.1,
+          y: this.position.y
+        },
+        velocity: {
+          x: 0,
+          y: -6
+        }
+      })
+    );
   }
 
-  update () {
+  update() {
     // À chaque mis à jour on dessine le joueur
     if (this.image) {
       if (keys.ArrowLeft.pressed && keys.ArrowRight.pressed) {
         this.velocity.x = 0;
       } else if (keys.ArrowLeft.pressed && this.position.x >= 0) {
         this.velocity.x = -6;
-      } else if (keys.ArrowRight.pressed && this.position.x <= world.width - this.width) {
+      } else if (
+        keys.ArrowRight.pressed &&
+        this.position.x <= world.width - this.width
+      ) {
         this.velocity.x = 6;
       } else {
         this.velocity.x = 0;

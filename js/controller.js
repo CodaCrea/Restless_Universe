@@ -1,9 +1,9 @@
 const keys = {
-  ArrowLeft: {pressed: false},
-  ArrowRight: {pressed: false},
+  ArrowLeft: { pressed: false },
+  ArrowRight: { pressed: false },
 };
 
-addEventListener('keydown', ({key}) => {
+addEventListener('keydown', ({ key }) => {
   switch (key) {
     case "ArrowLeft":
       keys.ArrowLeft.pressed = true;
@@ -14,7 +14,7 @@ addEventListener('keydown', ({key}) => {
   }
 });
 
-addEventListener("keyup", ({key}) => {
+addEventListener("keyup", ({ key }) => {
   switch (key) {
     case "ArrowLeft":
       keys.ArrowLeft.pressed = false;

@@ -5,7 +5,7 @@ class Grid {
       y: 0
     };
     this.velocity = {
-      x: 0.5,
+      x: 0.5, // Vitesse déplacement
       y: 0
     };
     this.aliens = [];
@@ -15,12 +15,14 @@ class Grid {
     this.width = columns * 34;
     for (let x = 0; x < columns; x++) {
       for (let y = 0; y < rows; y++) {
-        this.aliens.push(new Enemy1({
-          position: {
-            x: x * 34,
-            y: y * 34
-          }
-        }));
+        this.aliens.push(
+          new Enemy1({
+            position: {
+              x: x * 34,
+              y: y * 34
+            }
+          })
+        );
       }
     }
   }
