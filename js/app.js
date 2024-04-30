@@ -55,14 +55,14 @@ const animationLoop = () => {
           missile.position.y >= aliens.position.y &&
           missile.position.x + missile.width >= aliens.position.x &&
           missile.position.x - missile.width <= aliens.position.x + aliens.width) {
-          for (let i = 0; i < 12; i++) {
+          for (let i = 0; i < 5; i++) {
             particules.push(new Particule({
               position: {
                 x: aliens.position.x + aliens.width / 2,
                 y: aliens.position.y + aliens.height / 2
               },
               velocity: { x: (Math.random() - 0.5) * 2, y: (Math.random() - 0.5) * 2 },
-              radius: Math.random() * 5,
+              radius: Math.random() * 5 + 1,
               color: 'orange'
             }));
           }
