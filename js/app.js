@@ -77,7 +77,7 @@ const animationLoop = () => {
               grids.splice(indexGrid, 1);
               grids.push(new Grid());
             }
-          }, 0);
+          }, 5000);
         }
       });
     });
