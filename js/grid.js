@@ -5,7 +5,7 @@ class Grid {
       y: 0
     };
     this.velocity = {
-      x: 1,
+      x: 0.5,
       y: 0
     };
     this.aliens = [];
