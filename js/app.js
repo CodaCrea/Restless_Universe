@@ -77,7 +77,7 @@ const animationLoop = () => {
               grids.splice(indexGrid, 1);
               grids.push(new Grid());
             }
-          }, 5000);
+          }, 0);
         }
       });
     });
@@ -86,7 +86,7 @@ const animationLoop = () => {
     if (alienMissile.position.y + alienMissile.height >= world.height) {
       setTimeout(() => {
         alienMissiles.splice(index, 1);
-      }, 5000);
+      }, 0);
     } else {
       alienMissile.update();
     }
