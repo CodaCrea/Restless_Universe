@@ -45,7 +45,6 @@ const animationLoop = () => {
   });
   grids.forEach((grid, indexGrid) => {
     grid.update();
-    // Nombre de missiles par frame
     if (frames % 50 === 0 && grid.aliens.length > 0) {
       grid.aliens[Math.floor(Math.random() * grid.aliens.length)].shoot(
         alienMissiles
