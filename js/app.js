@@ -55,7 +55,7 @@ const animationLoop = () => {
           missile.position.y >= aliens.position.y &&
           missile.position.x + missile.width >= aliens.position.x &&
           missile.position.x - missile.width <= aliens.position.x + aliens.width) {
-          for (let i = 0; i < 5; i++) {
+          for (let i = 0; i < 12; i++) {
             particules.push(new Particule({
               position: {
                 x: aliens.position.x + aliens.width / 2,
