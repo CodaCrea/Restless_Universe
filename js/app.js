@@ -39,7 +39,7 @@ const animationLoop = () => {
       setTimeout(() => {
         missiles.splice(index, 1);
       }
-        , 0);
+        , 500);
     }
     else { missile.update(); }
   });
