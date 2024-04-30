@@ -39,7 +39,7 @@ const animationLoop = () => {
       setTimeout(() => {
         missiles.splice(index, 1);
       }
-        , 500);
+        , 0);
     }
     else { missile.update(); }
   });
@@ -62,7 +62,7 @@ const animationLoop = () => {
                 y: aliens.position.y + aliens.height / 2
               },
               velocity: { x: (Math.random() - 0.5) * 2, y: (Math.random() - 0.5) * 2 },
-              radius: Math.random() * 5 + 1,
+              radius: Math.random() * 5,
               color: 'orange'
             }));
           }
