@@ -52,7 +52,7 @@ class Enemy1 {
         },
         velocity: {
           x: 0,
-          y: 4
+          y: 2
         }
       }));
     }
